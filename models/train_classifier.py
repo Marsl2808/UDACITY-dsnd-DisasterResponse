@@ -30,11 +30,11 @@ def load_data(database_filepath):
     """
     Function: load data from database and return X and y.
     Args:
-      database_filepath(str): database file name included path
+      database_filepath: database file name included path
     Return:
-      X(pd.DataFrame): messages for X
-      y(pd.DataFrame): labels part in messages for y
-      category_names(str):category names
+      X: messages for X
+      y: labels part in messages for y
+      category_names: category names
     """
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table('disasterTab',engine) 
@@ -66,7 +66,7 @@ def tokenize(text):
 def build_model():
     """
     Function: build model that consist of pipeline
-    Return
+    Return:
       cv: Grid Search model
     """
 
@@ -91,7 +91,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
       model,
       X_test: X test dataset
       Y_test: y test dataset
-      category_names:category names of y
+      category_names: category names of y
     """
 
     y_pred = model.predict(X_test)
@@ -103,9 +103,7 @@ def save_model(model, model_filepath):
     """
     Function: save model as pickle file.
     Args:
-      model:target model
-    Return:
-      N/A
+      model: target model
     """
     with open(model_filepath, 'wb') as f:
         pickle.dump(model, f)

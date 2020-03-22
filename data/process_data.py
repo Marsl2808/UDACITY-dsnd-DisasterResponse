@@ -8,8 +8,8 @@ def load_data(messages_filepath, categories_filepath):
     """
     Function: merge data on id, of message and categories csv files 
     Args：
-      messages_filepath(str): messages file path
-      categories_filepath(str): categories files path
+      messages_filepath: messages file path
+      categories_filepath: categories files path
     Return：
        df： merge messages and categories
     """
@@ -58,7 +58,7 @@ def save_data(df, database_filename):
     """
     Function: save clean data
     Args:
-        df(pd.dataframe):clean dataset
+        df:clean dataset
     """
     engine = create_engine('sqlite:///'+database_filename)
     df.to_sql("disasterTab", engine,if_exists='replace', index=False) 
