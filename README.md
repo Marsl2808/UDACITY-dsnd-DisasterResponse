@@ -7,11 +7,19 @@
 
 ## 1. Installation <a name="installation"></a>
 Needed libraries:
-- NumPy
-- Pandas
+- json
+- plotly
+- pandas
+- nltk
+- flask
+- sklearn
+- sqlalchemy
+- numpy
 
 ## 2. Project Motivation <a name="motivation"></a>
-The Project is part of the UDACITY Datascientist Nanodgree program.
+The Project is part of the UDACITY Datascientist Nanodgree program and is in collaboration with Figure Eight.
+The data set containing real messages that were sent during disaster events. The goal is to classify these messages to pre-defined events
+s.t. an appropriate disaster relief agency can be notified. 
 
 ## 3. File Descriptions <a name="files"></a>  
 - process_data.py: ETL pipeline
