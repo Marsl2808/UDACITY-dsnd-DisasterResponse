@@ -18,7 +18,7 @@ Needed libraries:
 
 ## 2. Project Motivation <a name="motivation"></a>
 The Project is part of the UDACITY Datascientist Nanodgree program and is in collaboration with Figure Eight.
-The data set containing real messages that were sent during disaster events. The goal is to classify these messages to pre-defined events
+The data set contains real messages that were sent during disaster events. The goal is to classify these messages to pre-defined events
 s.t. an appropriate disaster relief agency can be notified. 
 
 ## 3. File Descriptions <a name="files"></a>  
