@@ -21,6 +21,8 @@ The Project is part of the UDACITY Datascientist Nanodgree program and is in col
 The data set contains real messages that were sent during disaster events. The goal is to classify these messages to pre-defined events
 s.t. an appropriate disaster relief agency can be notified. 
 
+Github: [link](https://github.com/Marsl2808/UDACITY-dsnd-DisasterResponse)
+
 ## 3. File Descriptions <a name="files"></a>  
 - process_data.py: ETL pipeline
 - train_classifier.py: ML pipeline

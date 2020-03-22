@@ -49,6 +49,11 @@ def index():
     label_values=labels['count'].values.tolist()
     label_names=labels['category'].values.tolist()
 
+    # get top 10 categories
+    categories = df.iloc[:,4:]
+    cat_mean = categories.mean().sort_values(ascending=False)[1:11]
+    cat_names = list(cat_mean.index)
+
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -83,6 +88,24 @@ def index():
                 'title': "Chart Frequency of Categories of Messages",
                 'yaxis': {
                     'title':"Message Category Frequency"
+                },
+                'xaxis': {
+                    'title': "Categories"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=cat_names,
+                    y=cat_mean
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 10',
+                'yaxis': {
+                    'title': "Percentage"
                 },
                 'xaxis': {
                     'title': "Categories"
